@@ -1,6 +1,7 @@
 {% extends "base.jinja" %}
 {% block title %} Timestamp Verifier {% endblock %}
 {% block content %}
+<h1>Token Generation</h1>
 <form>
     <label for="Time">Time: </label>
     <input id="time" readonly="true" />
@@ -8,6 +9,8 @@
     <input id="timestamp"  readonly="true" />
     <label for="token">Verification Token: </label>
     <input id="token"  readonly="true" />
+
+    <div></div>
 
     <input type="button" value="Show Token" id="show_token">
 
