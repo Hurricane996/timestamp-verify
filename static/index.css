@@ -1,124 +1,106 @@
 body {
-    font-size: 24px;
-    font-family: Arial;
-    margin: 0;
-}
-
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: white;
-    align-items: center;
-    display: flex;
+  font-size: 24px;
+  font-family: Arial;
+  margin: 0;
 }
 
 h1 {
-    margin: 0;
+  margin: 0;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+  align-items: center;
+  display: flex;
+}
+
+.navbar > :nth-last-child(2) {
+  margin-right: auto;
 }
 
 .navbar li {
-    padding: 8px;
-    color: white;
-    font-weight: bold;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+}
 
-
-
+.navbar li a {
+  text-decoration: none;
+  color: white;
 }
 
 .container {
-    max-width: 75%;
-    margin: auto;
-}
-
-.navbar> :nth-last-child(2) {
-    margin-right: auto;
-}
-
-
-.navbar li a {
-    text-decoration: none;
-    color: white;
+  max-width: 75%;
+  margin: auto;
 }
 
 form {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content 1fr;
 }
 
 form label {
-    padding: 0.25em;
-    line-height: 2em;
-    font-size: 1em;
-    vertical-align: middle;
+  padding: 0.25em;
+  line-height: 2em;
+  font-size: 1em;
+  vertical-align: middle;
 }
 
 input {
-    font-size: 24px;
-    border-radius: 0.25em;
-    padding: 0.25em;
-    margin: 0.25em;
-    border-style: solid;
-    border-color: #777;
+  font-size: 24px;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-style: solid;
+  border-color: #777;
+}
+
+.success,
+.error {
+  color: #fff;
+
+  border-radius: 0.25em;
+
+  padding: 0.55em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  font-size: 18px;
+}
+
+.success *,
+.error * {
+  margin: 0;
+}
+
+.success h3,
+.error h3 {
+  font-size: 30px;
 }
 
 .success {
-    background-color: #28a745;
-    color: #fff;
-
-    border-radius: 0.25em;
-
-    padding: 0.55em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-    font-size: 18px;
+  background-color: #28a745;
 }
 
-.success * {
-    margin: 0;
+.error {
+  background-color: #dc3545;
 }
 
 .ghlogo {
-    height: 1.5em;
-}
-
-
-
-.error {
-    background-color: #dc3545;
-    color: #fff;
-
-    border-radius: 0.25em;
-
-    padding: 0.55em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-    font-size: 18px;
-
-}
-
-.error * {
-    margin: 0;
-}
-
-.success h3 {
-    font-size: 30px;
-}
-
-.error h3 {
-    font-size: 30px;
+  height: 1.5em;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    margin-left: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 0.75em;
-    color: #666;
+  position: fixed;
+  bottom: 0;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75em;
+  color: #666;
 }
