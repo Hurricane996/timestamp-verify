@@ -1,6 +1,3 @@
-console.log("Hello, world!")
-
-
 var timeout = undefined
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -24,7 +21,5 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(function(err) {
             console.log(err)
         })
-
-        console.log("running");
     })
 })
