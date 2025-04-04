@@ -2,7 +2,7 @@ use axum::{
     extract::State,
     response::{IntoResponse, Response},
     routing::get,
-    Form, Router,
+    Form, Json, Router,
 };
 use axum_template::{engine::Engine, RenderHtml};
 use chrono::{DateTime, Utc};
@@ -24,6 +24,7 @@ async fn main() {
     let app = Router::new()
         .nest_service("/static", ServeDir::new("static"))
         .route("/", get(get_home))
+        .route("/token", get(get_token))
         .route("/verify", get(get_verify).post(post_verify))
         .with_state(AppState {
             template_engine: Engine::from(jinja),
@@ -35,12 +36,12 @@ async fn main() {
 
 #[axum::debug_handler]
 async fn get_home(State(state): State<AppState>) -> Response {
-    RenderHtml(
-        "index.jinja",
-        state.template_engine,
-        ValidatedTimestamp::get(),
-    )
-    .into_response()
+    RenderHtml("index.jinja", state.template_engine, ()).into_response()
+}
+
+#[axum::debug_handler]
+async fn get_token() -> Json<ValidatedTimestamp> {
+    Json(ValidatedTimestamp::get())
 }
 
 #[axum::debug_handler]

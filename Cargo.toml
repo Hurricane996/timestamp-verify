@@ -5,7 +5,7 @@ edition = "2021"
 default-run = "server"
 
 [dependencies]
-axum = { version = "0.8.3", features = ["macros"] }
+axum = { version = "0.8.3", features = ["macros", "json"] }
 axum-template = { version = "3.0.0", features = ["minijinja"] }
 base64 = "0.22.1"
 chrono = "0.4.40"
