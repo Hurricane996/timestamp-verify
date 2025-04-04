@@ -1,0 +1,19 @@
+[package]
+name = "timestamp-verify"
+version = "0.1.0"
+edition = "2021"
+default-run = "server"
+
+[dependencies]
+axum = { version = "0.8.3", features = ["macros"] }
+axum-template = { version = "3.0.0", features = ["minijinja"] }
+base64 = "0.22.1"
+chrono = "0.4.40"
+hmac = "0.12.1"
+minijinja = { version = "2.9.0", features = ["loader"] }
+serde = { version = "1.0.219", features = ["derive"] }
+sha2 = "0.10.8"
+thiserror = "2.0.12"
+tokio = { version = "1.44.1", features = ["full"] }
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["fs"] }

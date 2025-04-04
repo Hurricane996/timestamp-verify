@@ -1,0 +1,17 @@
+{% extends "base.jinja" %}
+{% block title %} Timestamp Verifier {% endblock %}
+{% block content %}
+<h1> Visited at {{ time_formatted }} </h1>
+
+
+<form>
+    <label for="timestamp">Timestamp: </label>
+    <input id="timestamp" value="{{ timestamp }}" readonly="true" />
+    <label for="token">Verification Token: </label>
+    <input id="token" value="{{ token }}" readonly="true" />
+
+</form>
+
+
+<p> Please copy and paste your timestamp and verification token into your speedrun.com submission</p>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.jinja" %}
+{% block title %} Timestamp Verifier {% endblock %}
+{% block content %}
+<h1>Token Verification</h1>
+
+{%if result is defined %}
+{% if result.Err is defined %}
+<div class="error">
+    <h3>Token verification failed</h3>
+    {{ result.Err }}
+</div>
+{% elif result.Ok is defined %}
+<div class="success">
+    <h3>Token verification succeeded</h3>
+    Token was generated {{ result.Ok }}
+</div>
+{% endif %}
+{% endif %}
+
+
+<form action="/verify" method="post">
+    <label for="timestamp">Timestamp: </label>
+    <input type="number" name="timestamp" id="timestamp" value="{{ input.timestamp if input is defined }}" />
+    <label for="token">Verification Token: </label>
+    <input type="text" name="token" id="token" value="{{ input.token if input is defined }}" />
+    <div></div><input type="submit" value="Submit">
+</form>
+{% endblock %}
