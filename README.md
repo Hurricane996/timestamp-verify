@@ -1,6 +1,8 @@
 # Timestamp Verifier
 A web app that allows users to create a verifiable timestamp using HMAC codes. Built for the UNDERTALE speedrunning community to allow for verification of runs with multiple video segments.
 
+Currently hosted at https://timestamp-verify.undertale.zip by @BenjaminUrquhart
+
 # Building and running
 ## Docker
 To run this with docker, first build the container with `docker build --tag "timestamp_verify" . --build-arg SECRET_KEY="<your secret key>"`, then run it with `docker run -d -p <port>:3000`. This will expose the web interface on whichever port 
