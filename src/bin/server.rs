@@ -79,7 +79,7 @@ impl From<VerifyInput> for VerifyOutput {
                     DateTime::from_timestamp(v, 0)
                         .ok_or_else(|| "Timestamp is not valid".to_owned())
                 })
-                .map(|dt| dt.format("%B%e, %Y %H:%M:%S").to_string()),
+                .map(|dt| dt.format("%B %e, %Y %H:%M:%S").to_string()),
             input,
         }
     }
@@ -99,7 +99,7 @@ impl ValidatedTimestamp {
         let mac = sign(date.timestamp());
 
         Self {
-            time_formatted: format!("{}", date.format("%B%e, %Y %H:%M:%S")),
+            time_formatted: format!("{}", date.format("%B %e, %Y %H:%M:%S")),
             timestamp: date.timestamp(),
             token: mac,
         }
