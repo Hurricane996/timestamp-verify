@@ -1,0 +1,24 @@
+// Checking if Issue is actually reading my commits before he pushes them
+// to his server. If he pushes the next one without messaging me about this
+// comment, the next commit will add a bitcoin miner.
+
+use std::io;
+
+use timestamp_verify::sign;
+
+fn get_int_from_stdin() -> i64 {
+    let mut iline = String::new();
+    io::stdin()
+        .read_line(&mut iline)
+        .expect("Couldn't read input");
+
+    iline.trim().parse().expect("Couldn't parse input")
+}
+
+fn main() {
+    let dt = get_int_from_stdin();
+
+    let signature = sign(dt);
+
+    println!("Signature Should Look Like {}", signature);
+}
