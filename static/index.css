@@ -8,6 +8,15 @@ h1 {
   margin: 0;
 }
 
+.bigwarn {
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+#token {
+  font-family: "Courier Prime", Courier, monospace;
+}
+
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -52,7 +61,7 @@ form label {
 }
 
 input {
-  font-size: 24px;
+  font-size: 32px;
   border-radius: 0.25em;
   padding: 0.25em;
   margin: 0.25em;
