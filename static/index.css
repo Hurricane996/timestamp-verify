@@ -15,6 +15,7 @@ h1 {
 
 #token {
   font-family: "Courier Prime", Courier, monospace;
+  font-size: 32px;
 }
 
 .navbar {
@@ -61,7 +62,7 @@ form label {
 }
 
 input {
-  font-size: 32px;
+  font-size: 24px;
   border-radius: 0.25em;
   padding: 0.25em;
   margin: 0.25em;
