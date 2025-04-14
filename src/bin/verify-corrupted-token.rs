@@ -1,7 +1,3 @@
-// Checking if Issue is actually reading my commits before he pushes them
-// to his server. If he pushes the next one without messaging me about this
-// comment, the next commit will add a bitcoin miner.
-
 use std::io;
 
 use timestamp_verify::sign;
